@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ember Starter Kit</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/jquery-2.1.1.min.js"></script>
+    <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/ember-1.8.0.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!-- to activate the test runner, add the "?test" query string parameter -->
+    <script src="tests/runner.js"></script>
+
+
+</head>
+<body onLoad="onLoad()">
+<script type="text/x-handlebars" id="teste">
+    <h2>Coletor</h2>
+
+    <p>testet</p>
+
+</script>
+
+<script type="text/x-handlebars">
+    <h2>teset</h2>
+    <a href='#/'>Início</a>
+    <a href='#/products'>Produtos</a>
+    <a href='#/geolocation'>Geo</a>
+    <a href='#/teste'>teste</a>
+    <hr>
+    {{outlet}}
+</script>
+
+<script type="text/x-handlebars" id="index">
+    <form id='leituraColetaForm' name='leituracoleta'>
+        <input type='text' id='code'/>
+        <table>
+            <thead>
+            <td>Ref.</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            </thead>
+            <tbody id='productreads'></tbody>
+        </table>
+    </form>
+</script>
+
+<script type="text/x-handlebars" id="products">
+    Produtos<br/>
+    <button id='btnBuscar' onclick='loadProducts();'>Buscar</button>
+    <button id='btnApagatudo' onclick='deleteAllProducts();'>Apagar Tudo</button>
+    <button id='btnMaxVersion' onclick='alert("is: " + maxProductVersion());'>Max Version</button>
+    <table>
+        <thead>
+        <td>Ref.</td>
+        <td>Descrição</td>
+        <td>Preço</td>
+        </thead>
+        <tbody id='productss'></tbody>
+    </table>
+</script>
+
+<script type="text/x-handlebars" id="geolocation">
+    <div id='geo'/>
+</script>
+
+</body>
+</html>
